@@ -2,14 +2,13 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("yellow"," ===========================\n");
-echo color("blue","| by : Gojek.https..|\n");
-echo color("green","beksbhale|\n");
+echo color("blue","   by : Gojek.https..|\n");
+echo color("green"," beksbhale|\n");
 echo color("white"," $$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 echo color("blue","  >>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
-echo color("red","| by :hack claimgojek|\n");
+echo color("red","   by :hack claimgojek|\n");
 echo "| Version :3.47.2    |\n";
 echo "| Time    :".date('[d-m-Y] [H:i:s]')."   |\n";
-echo " ===========================\n";
 // function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
