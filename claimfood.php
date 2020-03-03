@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
-include "function.php";
+include "claimfood.php";
 echo color("green"," ===========================\n");
 echo color("white","| by : Beksbhale|\n");
 echo color("yellow","===========================\n");
