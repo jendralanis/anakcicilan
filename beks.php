@@ -1,8 +1,8 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("greenlight"," =========+============\n");
-echo color("bluelight"," $$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+echo color("green"," =========+============\n");
+echo color("blue"," $$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 echo color("blue"," <<<<<welcome to termux>>>>>\n");
 echo color("red","<><>bogor hack gojek voucher<<>>\n");
 echo color("white"," =created]beksbhale==========================\n");
@@ -132,26 +132,26 @@ function change(){
         $voucher10 = getStr1('"title":"','",',$cekvoucher,"10");
         $voucher11 = getStr1('"title":"','",',$cekvoucher,"11");
         $voucher12 = getStr1('"title":"','",',$cekvoucher,"12");
-        echo "\n".color("greenlight","!] Total voucher ".$total." : ");
-        echo "\n".color("bluelight","1.".$voucher1);
-        echo "\n".color("bluelight","2.".$voucher2);
-        echo "\n".color("bluelight","3.".$voucher3);
-        echo "\n".color("bluelight","4.".$voucher4);
-        echo "\n".color("bluelight","5.".$voucher5);
-        echo "\n".color("bluelight","6.".$voucher6);
-        echo "\n".color("bluelight","7.".$voucher7);
-        echo "\n".color("bluelight","8.".$voucher8);
-        echo "\n".color("bluelight","9.".$voucher9);
-        echo "\n".color("bluelight","10.".$voucher10);
-        echo "\n".color("bluelight","11.".$voucher11);
-        echo "\n".color("bluelight","12.".$voucher12)."\n";
+        echo "\n".color("blue","!] Total voucher ".$total." : ");
+        echo "\n".color("blue","1.".$voucher1);
+        echo "\n".color("blue","2.".$voucher2);
+        echo "\n".color("blue","3.".$voucher3);
+        echo "\n".color("blue","4.".$voucher4);
+        echo "\n".color("blue","5.".$voucher5);
+        echo "\n".color("blue","6.".$voucher6);
+        echo "\n".color("blue","7.".$voucher7);
+        echo "\n".color("blue","8.".$voucher8);
+        echo "\n".color("blue","9.".$voucher9);
+        echo "\n".color("blue","10.".$voucher10);
+        echo "\n".color("blue","11.".$voucher11);
+        echo "\n".color("blue","12.".$voucher12)."\n";
          setpin:
          echo color("yellow","bikin pin kamu")."\n";
          echo color("white"," Pin kamu = 111111 ")."\n";
          $data2 = '{"pin":"111111"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
-         echo color("nevy","?] Otp set pin: ");
+         echo color("white","?] Otp set pin: ");
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
