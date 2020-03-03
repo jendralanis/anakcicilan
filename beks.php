@@ -9,7 +9,7 @@ echo color("blue","  >>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 echo color("red","   by :hack claimgojek|\n");
 echo "| Version :3.47.2    |\n";
 echo "| Time    :".date('[d-m-Y] [H:i:s]')."   |\n";
-// function change(){
+function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
