@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("green"," ===========================\n");
-echo color("white","| by : Beksbhale|\n");
+echo color("blue","| by : Beksbhale|\n");
 echo color("yellow","===========================\n");
 echo "| Version : Termux.com |\n";
 echo "| Time    :".date('[d-m-Y] [H:i:s]')."   |\n";
