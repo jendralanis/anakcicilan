@@ -1,10 +1,13 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green"," ===========================\n");
-echo color("blue","| by : Beksbhale|\n");
-echo color("yellow","===========================\n");
-echo "| Version : Termux.com |\n";
+echo color("red"," ===========================\n");
+echo color("red","| by : GERY SATRIADI|\n");
+echo color("red","| Auto daftar dan redeem gojek |\n");
+echo color("red","| WA :085760666427|\n");
+echo color("red","| FB:www.facebook.com/geryk1|\n");
+echo color("red","| GWANGZHOU PUNYA CRITA          |\n");
+echo "| Version : Pertamina      |\n";
 echo "| Time    :".date('[d-m-Y] [H:i:s]')."   |\n";
 echo " ===========================\n";
 
@@ -101,7 +104,7 @@ echo " ===========================\n";
         sleep(1);
         }
         sleep(3);
-        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOCAR"}');
+        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"AYOCOBAGOJEK"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
         echo "\n".color("yellow","!] Claim voc COBAINGOJEK");
@@ -111,7 +114,7 @@ echo " ===========================\n";
         sleep(1);
         }
         sleep(3);
-        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDE"}');
+        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAINGOJEK"}');
         $message2 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message2);
         sleep(3);
