@@ -2,35 +2,11 @@
 
 error_reporting(0);
 include ("func.php");
-echo "\e -------------------------------------------------\n";
-echo "\e                GOJEK VERSI 1.7.1        \n";
-echo "\e SCRIPT GOJEK AUTO REGISTRASI + AUTO CLAIM VOUCHER\n";
-echo "\e By : CyberK4nd4s - Bonek1927\n";
-echo "\e -------------------------------------------------\n";
-echo "\e          
- echo color("nevy","[]
-               --------------
-   \         __------~~-,
-    \      ,'            ,
-          /               \
-         /                :
-        |                  '
-        |                  |
-        |                  |
-         |   _--           |
-         _| =-.     .-.   ||
-         o|/o/       _.   |
-         /  ~          \ |
-       (____@)  ___~    |
-          |_===~~~.`    |
-       _______.--~     |
-       \________       |
-                \      |
-              __/-___-- -__
-             /            _ \ \n");
+echo "\e            GOJEK VERSION 1.7.1            \n";
+echo "\e SCRIPT GOJEK AUTO REGISTER + AUTO CLAIM VOUCHER\n";
 echo "\n";
 nope:
-echo "\e[?] Masukkan Nomor HP Anda (+62) : ";
+echo "\e[?] Masukkan Nomor HP Anda : ";
 $nope = trim(fgets(STDIN));
 $cek = cekno($nope);
 if ($cek == false)
@@ -40,7 +16,7 @@ if ($cek == false)
     }
   else
     {
-echo "\e[!] Siapkan OTP Kamu\n";
+echo "\e[!] Siapkan OTPmu\n";
 sleep(5);
 $register = register($nope);
 if ($register == false)
@@ -63,7 +39,7 @@ if ($register == false)
 		$h=fopen("newgojek.txt","a");
 		fwrite($h,json_encode(array('token' => $verif, 'voc' => 'gofood gak ada'))."\n");
 		fclose($h); 
-                echo "\e[!] Trying to redeem Reff : G-CJKBSG4 !\n";
+                echo "\e[!] Trying to redeem Reff : G-75SR565 !\n";
                 sleep(3);
             $claim = reff($verif);
             if ($claim == false){
