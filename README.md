@@ -1,5 +1,5 @@
-git clone https://github.com/beksbhale20/anakcicilan/edit/master/README.md
+git clone https://github.com/beksbhale20/anakcicilan
 
-cd claimfood
+cd anakcicilan
 
-php claimfood.php
+php
