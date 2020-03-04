@@ -2,7 +2,7 @@
 
 error_reporting(0);
 include ("func.php");
-echo color("yellow","    __------~~-,
+echo color("purple","    __------~~-,
     \      ,'            ,
           /               \
          /                :
@@ -25,24 +25,6 @@ echo "\e by[]            Hack by:Beksbhale     \n";
 echo "\e _______________________________________\n";
 echo "\e :bogor jawabarat";
 echo "\e -------------------------------------------------\n";
-echo color("nevy"," \         __------~~-,
-    \      ,'            ,
-          /               \
-         /                :
-        |                  '
-        |                  |
-        |                  |
-         |   _--           |
-         _| =-.     .-.   ||
-         o|/o/       _.   |
-         /  ~          \ |
-       (____@)  ___~    |
-          |_===~~~.`    |
-       _______.--~     |
-       \________       |
-                \      |
-              __/-___-- -__
-             /            _ \ \n";
 echo "\n";
 nope:
 echo "\e[?] Masukkan Nomor HP Anda (+62) : ";
