@@ -47,7 +47,7 @@ sleep(5);
 $register = register($nope);
 if ($register == false)
     {
-    echo "\e[x] Failed Get OTP!\n";
+    echo "\e[x] Nomor telah terdaftar!!!\n";
     }
   else
     {
@@ -69,7 +69,7 @@ if ($register == false)
                 sleep(3);
             $claim = reff($verif);
             if ($claim == false){
-            echo "\e[!] Failed to Claim Voucher, Try to Claim Manually\n";
+            echo "\e[!] Gagal to Claim Voucher, referral sudah imsakk\n";
             }else{
                 echo "\e[+] ".$claim."\n";
             }
