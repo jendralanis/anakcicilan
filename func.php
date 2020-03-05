@@ -1,6 +1,4 @@
 <?php
-###Original From###
-###https://github.com/osyduck/Gojek-Register###
 //ikiganteng
 function request($url, $token = null, $data = null, $pin = null){
 $header[] = "Host: api.gojekapi.com";
@@ -170,7 +168,7 @@ function claims($token,$voc)
 
     function claim1($token)
     {
-    $data = '{"promo_code":"GOFOODSANTAI11"}';    
+    $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -184,7 +182,7 @@ function claims($token,$voc)
     }
     function claim2($token)
     {
-    $data = '{"promo_code":"GOFOODSANTAI08"}';    
+    $data = '{"promo_code":"G-MPW4WBM"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -198,7 +196,7 @@ function claims($token,$voc)
     }
      function ride($token)
     {
-    $data = '{"promo_code":"COBAINGOJEK"}';    
+    $data = '{"promo_code":"G-MPW4WBM"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -212,7 +210,7 @@ function claims($token,$voc)
     }
      function cekvocer($token)
     {
-    $data = '{"promo_code":"AYOCOBAGOJEK"}';    
+    $data = '{"promo_code":"G-MPW4WBM"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
