@@ -2,11 +2,10 @@
 
 error_reporting(0);
 include ("func.php");
-echo "\e   _______Sayangnaya_____          \n";
-echo "\e Reward claim referal kuy\n";
+echo "\e [] beksbhale_____\n";
 echo "\n";
 nope:
-echo "\e[?] Masukkan Nomor HP Anda : ";
+echo "\e[?] Masukkan Nomor HP Kamuu : ";
 $nope = trim(fgets(STDIN));
 $cek = cekno($nope);
 if ($cek == false)
@@ -39,7 +38,7 @@ if ($register == false)
 		$h=fopen("newgojek.txt","a");
 		fwrite($h,json_encode(array('token' => $verif, 'voc' => 'gofood gak ada'))."\n");
 		fclose($h); 
-                echo "\e[!] Trying to redeem Reff : G-MPW4WBM !\n";
+                echo "\e[!] Claimmu sedang di proses!\n";
                 sleep(3);
             $claim = reff($verif);
             if ($claim == false){
