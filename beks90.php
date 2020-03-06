@@ -4,24 +4,10 @@ include "function.php";
 echo color("green"," =================================== \n");
 echo color("red"," ******************************  \n");
 
-echo "\n\e[0;31m]
-┊┊┊▕▔╲▂▂▂╱▔▏┊┊┊
-╭━━╮╭┈╮┈╭┈╮╭━━╮┈
-╰╰╰┃▏╭╮┈╭╮▕┃╯╯╯
-┈┃┈┃▏┈┈▅┈┈▕┃┈┃┈
-┈┃┈┃▏┈╰┻╯┈▕┃┈┃┈
-┈┃┈╰▅▅▅☼▅▅▅╯┈┃┈
-┈╰━━┓┈╭┻╮┈┏━━╯
-Claim voucher gojek.com.id...
-════════════════════════════════
-════════════════════════════════
-[=] Coded By = Beks_90
-[=] Telegram= @uyahitugaram
-[=] Team         = p4 comm
-[=] github       = https://github.com/beksbhale20/anakcicilan
-════════════════════════════════
-════════════════════════════════
- 
+echo color("green"," {{{{{{ANEKA VOUCHER GOJEK}}}}}\n");
+
+echo color("green"," =================================== \n");
+echo "  °°°°°°°°°°  CLAIM RESTART PHP°°°°°°°°°°°     \n";
 
 echo " Time       : ".date('d-m-Y||H:i:s')." \n";
 echo color("green"," =================================== \n");
