@@ -1,8 +1,11 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green"," =================================== \n");
-echo color("red"," ******************************  \n");
+echo color("red"," =================================== \n");
+echo color("red"," =================================== \n");
+echo color("red"," =================================== \n");
+echo color("red"," =================================== \n");
+
 
 echo color("red"," NKRI HARGA MATI \n");
 
@@ -10,7 +13,10 @@ echo color("white"," =================================== \n");
 echo "  °°°°°°°°°°  SUNDA KUDU PINTER°°°°°°°°°°°     \n";
 
 echo " Time       : ".date('d-m-Y||H:i:s')." \n";
-echo color("green"," =================================== \n");
+echo color("white"," =================================== \n");
+echo color("white"," =================================== \n");
+echo color("white"," =================================== \n");
+echo color("white"," =================================== \n");
 
 //	function change(){
         $nama = nama();
