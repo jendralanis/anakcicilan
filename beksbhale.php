@@ -22,7 +22,7 @@ echo color("white"," =================================== \n");
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","?] NO HP: ");
+        echo color("white","?] NO HP: ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
@@ -50,71 +50,71 @@ echo color("white"," =================================== \n");
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
 			$otptoken = getStr('"otp_token":"','"',$register);
-			echo color("green","+] Verification code has been sent")."\n";
+			echo color("white","+] Verification code has been sent")."\n";
 			otp:
-			echo color("nevy","?] KODE OTP : ");
+			echo color("red","?] KODE OTP : ");
 			$otp = trim(fgets(STDIN));
 			$data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
 			$verif = request("/v5/customers/phone/verify", null, $data1);
 			if(strpos($verif, '"access_token"')){
-				echo color("green","+] Register Success\n");
+				echo color("white","+] Register Success\n");
 				$token = getStr('"access_token":"','"',$verif);
 				$uuid = getStr('"resource_owner_id":',',',$verif);
 				echo color("green","+] Your access token : ".$token."\n\n");
 				save("token.txt",$token);
 				
-				echo color("green","\n===========(REDEEM VOUCHER)===========");
-				echo "\n".color("yellow","!] Claim Voc GOCAR 14K GASPOOLLL");
-				echo "\n".color("yellow","!] Please wait...");
+				echo color("white","\n===========(REDEEM VOUCHER)===========");
+				echo "\n".color("blue","!] Claim Voc GOCAR 14K");
+				echo "\n".color("blue","!] Please wait...");
 				for($a=1;$a<=3;$a++){
-					echo color("yellow",".");
+					echo color("white",".");
 					sleep(1);
 				}
 				$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOCAR"}');
 				$message = fetch_value($code1,'"message":"','"');
 				if(strpos($code1, 'You can use this promo now...')){
-					echo "\n".color("green","+] Message: ".$message);
+					echo "\n".color("white","+] Message: ".$message);
 					goto goride;
 				}else{
-					echo "\n".color("red","-] Message: ".$message);
+					echo "\n".color("nevy","-] Message: ".$message);
 					
-					echo "\n".color("yellow","!] Claim Voc GORIDE 8K");
-					echo "\n".color("yellow","!] Please wait...");
+					echo "\n".color("white","!] Claim Voc GORIDE 8K");
+					echo "\n".color("white","!] Please wait...");
 					for($a=1;$a<=3;$a++){
-						echo color("yellow",".");
+						echo color("blue",".");
 						sleep(1);
 					}
 					sleep(3);
 					$boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDE"}');
 					$messageboba10 = fetch_value($boba10,'"message":"','"');
 					if(strpos($boba10, 'You can use this promo now...')){
-						echo "\n".color("green","+] Message: ".$messageboba10);
+						echo "\n".color("white","+] Message: ".$messageboba10);
 						goto goride;
 					}else{
 						echo "\n".color("red","-] Message: ".$messageboba10);
 					}
 					goride:
-					echo "\n".color("yellow","!] Claim Voc GO FOOD 15+10K");
-					echo "\n".color("yellow","!] Please wait...");
+					echo "\n".color("white","!] Claim Voc GO FOOD 15+10K");
+					echo "\n".color("white","!] Please wait...");
 					for($a=1;$a<=3;$a++){
-						echo color("yellow",".");
+						echo color("blue",".");
 						sleep(1);
 					}
 					sleep(3);
 					$goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
 					$message1 = fetch_value($goride,'"message":"','"');
-					echo "\n".color("green","+] Message: ".$message1);
+					echo "\n".color("blue","+] Message: ".$message1);
 							
-					echo "\n".color("yellow","!] Claim Voc ALFAMART");
-					echo "\n".color("yellow","!] Please wait...");
+					echo "\n".color("white","!] Claim Voc ALFAMART");
+					echo "\n".color("white","!] Please wait...");
 					for($a=1;$a<=3;$a++){
-						echo color("yellow",".");
+						echo color("blue",".");
 						sleep(1);
 					}
 					sleep(3);
 					$goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"BELANJAINAJA"}');
 					$message2 = fetch_value($goride1,'"message":"','"');
-					echo "\n".color("green","+] Message: ".$message2);
+					echo "\n".color("blue","+] Message: ".$message2);
 					sleep(3);
 					
 					$cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=20&page=1', $token);
@@ -126,14 +126,14 @@ echo color("white"," =================================== \n");
 					$voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
 					$voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
 					$voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
-					echo "\n".color("yellow","-> Total voucher ".$total." : ");
-					echo "\n".color("green","1. ".$voucher1);
-					echo "\n".color("green","2. ".$voucher2);
-					echo "\n".color("green","3. ".$voucher3);
-					echo "\n".color("green","4. ".$voucher4);
-					echo "\n".color("green","5. ".$voucher5);
-					echo "\n".color("green","6. ".$voucher6);
-					echo "\n".color("green","7. ".$voucher7);
+					echo "\n".color("blue","-> Total voucher ".$total." : ");
+					echo "\n".color("red","1. ".$voucher1);
+					echo "\n".color("red","2. ".$voucher2);
+					echo "\n".color("red","3. ".$voucher3);
+					echo "\n".color("red","4. ".$voucher4);
+					echo "\n".color("white","5. ".$voucher5);
+					echo "\n".color("white","6. ".$voucher6);
+					echo "\n".color("white","7. ".$voucher7);
 					echo"\n";
 					$expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
 					$expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
@@ -165,8 +165,8 @@ echo color("white"," =================================== \n");
 				}
 			}else{
 				echo color("red","-] The code you entered is incorrect");
-				echo color("green", "\n =================================== \n\n");
-				echo color("yellow","!] Please input again \n");
+				echo color("white", "\n =================================== \n\n");
+				echo color("blue","!] Please input again \n");
 				goto otp;
             }
 		}else{
