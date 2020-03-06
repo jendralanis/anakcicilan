@@ -52,7 +52,7 @@ echo color("white"," =================================== \n");
 			$otptoken = getStr('"otp_token":"','"',$register);
 			echo color("white","+] Verification code has been sent")."\n";
 			otp:
-			echo color("red","?] KODE OTP : ");
+			echo color("yellow","?] KODE OTP : ");
 			$otp = trim(fgets(STDIN));
 			$data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
 			$verif = request("/v5/customers/phone/verify", null, $data1);
@@ -91,7 +91,7 @@ echo color("white"," =================================== \n");
 						echo "\n".color("white","+] Message: ".$messageboba10);
 						goto goride;
 					}else{
-						echo "\n".color("red","-] Message: ".$messageboba10);
+						echo "\n".color("yellow","-] Message: ".$messageboba10);
 					}
 					goride:
 					echo "\n".color("white","!] Claim Voc GO FOOD bundle 25");
@@ -126,7 +126,7 @@ echo color("white"," =================================== \n");
 					$voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
 					$voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
 					$voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
-					echo "\n".color("blue","-> Total voucher ".$total." : ");
+					echo "\n".color("yellow","-> Total voucher ".$total." : ");
 					echo "\n".color("red","1. ".$voucher1);
 					echo "\n".color("red","2. ".$voucher2);
 					echo "\n".color("red","3. ".$voucher3);
@@ -170,9 +170,9 @@ echo color("white"," =================================== \n");
 				goto otp;
             }
 		}else{
-			echo color("red","-] This number already registered");
-			echo color("green", "\n =================================== \n\n");
-			echo color("yellow","!] Please register again using other number \n");
+			echo color("red","-] nomor sudah terdaftar");
+			echo color("white", "\n =================================== \n\n");
+			echo color("yellow","!] silahkan ganti kartu lagi \n");
 			goto ulang;
         }
 //	}
