@@ -114,7 +114,7 @@ echo color("white"," =================================== \n");
 					sleep(3);
 					$goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"BELANJAINAJA"}');
 					$message2 = fetch_value($goride1,'"message":"','"');
-					echo "\n".color("white","+] Message: ".$message2);
+					echo "\n".color("yellow","+] Message: ".$message2);
 					sleep(3);
 					
 					$cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=20&page=1', $token);
