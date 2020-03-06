@@ -22,7 +22,7 @@ echo color("white"," =================================== \n");
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("white","?] NO HP: ");
+        echo color("white","?] MASUKAN NO HP YG BELUM TERDAFTAR: ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
@@ -63,9 +63,9 @@ echo color("white"," =================================== \n");
 				echo color("green","+] Your access token : ".$token."\n\n");
 				save("token.txt",$token);
 				
-				echo color("white","\n===========(REDEEM VOUCHER)===========");
-				echo "\n".color("blue","!] Claim Voc GOCAR 14K");
-				echo "\n".color("blue","!] Please wait...");
+				echo color("white","\n======================");
+				echo "\n".color("white","!] Claim Voc GOCAR 14K");
+				echo "\n".color("white","!] Please wait...");
 				for($a=1;$a<=3;$a++){
 					echo color("white",".");
 					sleep(1);
@@ -76,7 +76,7 @@ echo color("white"," =================================== \n");
 					echo "\n".color("white","+] Message: ".$message);
 					goto goride;
 				}else{
-					echo "\n".color("nevy","-] Message: ".$message);
+					echo "\n".color("yellow","-] Message: ".$message);
 					
 					echo "\n".color("white","!] Claim Voc GORIDE 8K");
 					echo "\n".color("white","!] Please wait...");
@@ -94,27 +94,27 @@ echo color("white"," =================================== \n");
 						echo "\n".color("red","-] Message: ".$messageboba10);
 					}
 					goride:
-					echo "\n".color("white","!] Claim Voc GO FOOD 15+10K");
+					echo "\n".color("white","!] Claim Voc GO FOOD bundle 25");
 					echo "\n".color("white","!] Please wait...");
 					for($a=1;$a<=3;$a++){
-						echo color("blue",".");
+						echo color("yellow",".");
 						sleep(1);
 					}
 					sleep(3);
 					$goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOOD022620A"}');
 					$message1 = fetch_value($goride,'"message":"','"');
-					echo "\n".color("blue","+] Message: ".$message1);
+					echo "\n".color("red","+] Message: ".$message1);
 							
 					echo "\n".color("white","!] Claim Voc ALFAMART");
 					echo "\n".color("white","!] Please wait...");
 					for($a=1;$a<=3;$a++){
-						echo color("blue",".");
+						echo color("yellow",".");
 						sleep(1);
 					}
 					sleep(3);
 					$goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"BELANJAINAJA"}');
 					$message2 = fetch_value($goride1,'"message":"','"');
-					echo "\n".color("blue","+] Message: ".$message2);
+					echo "\n".color("white","+] Message: ".$message2);
 					sleep(3);
 					
 					$cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=20&page=1', $token);
