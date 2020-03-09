@@ -1,12 +1,22 @@
 <?php
+date_default_timezone_set('Asia/Jakarta');
+include "function.php";
+echo color("red"," =================================== \n");
+echo color("red"," =================================== \n");
+echo color("red"," =================================== \n");
+echo color("red"," =================================== \n");
 
-error_reporting(0);
-include ("func.php");
-echo "\e {}{}{}{}{}{} {}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{{\n";
-echo "\e      {}selamat datang di termux{}    \n";
-echo "\e {}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\n";
-echo "\e By : Rahasia public 2090****\n";
-echo "\e -------------------------------------------------\n";
+
+echo color("red"," NKRI HARGA MATI \n");
+
+echo color("white"," =================================== \n");
+echo "  °°°°°°°°°°  SUNDA KUDU PINTER°°°°°°°°°°°     \n";
+
+echo " Time       : ".date('d-m-Y||H:i:s')." \n";
+echo color("white"," =================================== \n");
+echo color("white"," =================================== \n");
+echo color("white"," =================================== \n");
+echo color("white"," =================================== \n");
 echo "\e          
                 _                       _
  ___  ___| | __ _ _ __ ___   __ _| |_
